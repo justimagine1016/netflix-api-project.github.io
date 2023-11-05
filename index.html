@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Netflix</title>
-  <link rel="stylesheet" href="home_page.css"/>
+  <link rel="stylesheet" href="homepage.css"/>
   <script src="script2.js"></script>
 </head>
 <body>
@@ -13,10 +13,10 @@
   <div class="nav">
     <div class="nav_left">
       <a href="index.html">
-        <img src="img/netflix.png" alt="netflix-logo"></a>
+        <img class="nav_logo" src="img/netflix.png" alt="netflix-logo"></a>
     </div>
     <div class="nav_right">
-      <img src="img/Netflix.gif" alt="netflix-icon">
+      <img src="img/Netflix.gif" alt="netflix-icon" class="nav_avatar">
     </div>
   </div>
   <!-- banner -->
@@ -39,10 +39,12 @@
     </div>
   </div>
 
-
-
-
-
-  
+<script>
+  window.addEventListener('scroll',function(){
+    
+    var nav = document.querySelector('.nav');
+     nav.classList.toggle('active', window.scrollY > 0);
+  })
+</script>
 </body>
 </html>
